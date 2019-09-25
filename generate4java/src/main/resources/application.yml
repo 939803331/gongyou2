@@ -1,0 +1,24 @@
+
+spring:
+  application:
+    name: generator
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.0.221:3308/jxc-cloud?characterEncoding=utf8&useSSL=false
+    username: root
+    password:
+  jpa:
+    show-sql: true
+
+server:
+  port: 8001
+generator:
+  schema: jxc-cloud
+  table: jxc_area
+  path: D:\workSpace\jxc-landfill\src\main\java
+  packagesEntity: com.weiwei.landfill.site.entity
+  packagesVo: com.weiwei.landfill.site.vo
+  packagesMapper: com.weiwei.landfill.site.mapper
+  packagesService: com.weiwei.landfill.site.service
+  packagesServiceImpl: com.weiwei.landfill.site.service.impl
+  packagesController: com.weiwei.landfill.site.controller

@@ -1,0 +1,3 @@
+com\ph\provider\service\HelloService.class
+com\ph\provider\controller\HelloController.class
+com\ph\provider\service\impl\HelloServiceImpl.class

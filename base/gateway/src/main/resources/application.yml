@@ -1,0 +1,20 @@
+server:
+  port: 7003
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+      - id: user-route
+        uri: lb://USER-SERVICE
+        predicates:
+        - Path=/**   #判断访问7003的路径是否以 /user开头
+        filters:
+        - RequestTime=true
+#        - AddResponseHeader=aaaaaaaaaaaaaaaa, Default-Bar
+#        - StripPrefix=1   #过滤以/user/*开头的两段路径， 转发请求对应 USER-SERVICE模块请求
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/

@@ -1,0 +1,29 @@
+
+server:
+  port: 7002
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/939803331/spring-cloud-config.git
+          password: '${cipher}AQA1/XHRR+jmP0G1TbnrxwaYW1J52GahfTEJK3jZTJQKuZaV3OzLAGVYV+YVN4s9df13sDDgfQrbTOPQegK1XI8kqcmKhO5Q8RBw56hNmSj4YVJJdlmtIhsFXcBtMnbFmuwFImVf3mESsXc7F4Fzp3SaOR46xxkobIBUDgkiPZhQqn8mh1eI7BYZYnhBnDsSPAt2D+DEkwYrEAzDEb0LM+dqua9sVDKwRfK0bM8iilq+5dsTNfF8zBVeFFWy30RX9wOynfMCrgDo17K4rzGyu6vHSyJaauuQ5wCjC4wuvQo3Pxxu0BBctdhx48RVNDlBdYBT4Uk8cQP93PBbUcbjbTP8UqOfJxVbovX+M5gUXU8oA7AKOcn9F40HCSjGSRv2Bio='
+          username: 939803331@qq.com
+  security:
+    user:
+      name: user
+      password: 123456
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+#encrypt:
+#  key-store:
+#    alias: config-server
+#    location: encryp-info.keystore
+#    password: 123456
+#    secret: 123456

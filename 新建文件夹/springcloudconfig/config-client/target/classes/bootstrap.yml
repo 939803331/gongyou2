@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      profile: dev
+      label: master
+      uri: http://localhost:7002
+      username: user
+      password: 123456
